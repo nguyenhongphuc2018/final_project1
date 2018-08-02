@@ -13,9 +13,12 @@
         <a class="nav-link core-sprite notification-icon hide-text" href="#">Notification</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link core-sprite profile-icon hide-text" href="#">Profile</a>
+        <%= link_to "Profile", current_user, 
+          class: "nav-link core-sprite profile-icon hide-text" %>
       </li>
-      <%= link_to "log out", destroy_user_session_path, method: :delete	 %>
+      <li class="nav-item">
+        <%= link_to "log out", destroy_user_session_path, method: :delete	 %>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
