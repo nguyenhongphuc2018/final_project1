@@ -20,6 +20,9 @@ gem "toastr-rails"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "carrierwave"
+gem "mini_magick"
+gem "dropzonejs-rails"
+gem 'bootstrap-tooltip-rails'
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

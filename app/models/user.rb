@@ -3,4 +3,5 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :trackable, :validatable
   validates :name, presence: true, length: {maximum: 50}
   mount_uploader :image, ImageUploader
+  has_many :posts
 end
