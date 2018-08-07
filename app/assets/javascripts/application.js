@@ -16,4 +16,6 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require toastr
+//= require dropzone
+//= require main
 //= require_tree .
