@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = Post.all.includes(:photos, :user).order_created_desc.limit(10)
+    @posts = Post.all.includes(:photos, :user, :likes).order_created_desc.limit(10)
     @post = Post.new
   end
   
@@ -24,6 +24,8 @@ class PostsController < ApplicationController
   end
   
   def show
+    @likes = @post.likes.includes(:user)
+    @is_liked = @post.is_liked(current_user)
   end
 
   def destroy
